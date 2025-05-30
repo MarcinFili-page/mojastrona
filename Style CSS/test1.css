@@ -1,0 +1,813 @@
+﻿/*@viewport {
+    width: device-width;
+}*/
+
+
+* {
+    margin: 0px;
+}
+
+
+body {
+    background-color: grey;
+    color: white;
+}
+
+canvas {
+    border: 1px solid black;
+    background-color: white
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+
+li {
+    float: left;
+    font-size: 30px;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+        li a:hover {
+            background-color: deepskyblue;
+        }
+
+.active {
+    background-color: deepskyblue;
+    color: white;
+}
+
+.pionowe {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    background-color: #555;
+    color: white;
+}
+
+item_name {
+    color: greenyellow
+}
+
+label {
+    margin-left: 30px;
+}
+
+img {
+    margin-left: 20px;
+}
+
+.item {
+    padding: 20px;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    margin-left: 10px;
+    text-align: center;
+    color: black;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 250px;
+    height: 250px;
+    font-size: 12px;
+}
+
+    .item:hover {
+        transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        box-shadow: 0 0 20px #888;
+        background-color: #fff;
+        border: 2px solid black;
+    }
+
+.opisy {
+    text-align: center;
+    border-bottom: solid 2px silver;
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: white
+}
+
+td {
+    font-size: 25px;
+    border: solid 2px white;
+}
+
+.tytuł {
+    text-align: center;
+}
+
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+    .flex-container > div {
+        width: 250px;
+        height: 310px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        border: 2px solid silver;
+        font-size: 20px;
+        position: center;
+    }
+
+.flex-item {
+    padding: 5px;
+    width: 150px;
+    height: 100px;
+    margin-top: 10px;
+    line-height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+
+
+.Describ {
+    font-size: 20px;
+}
+
+.znacznik {
+    color: red;
+}
+
+header {
+    text-align: center;
+    font-size: 40px;
+    color: orange
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.trailery {
+    width: 1000px;
+    height: 700px;
+}
+
+legend {
+    font-size: 40px;
+}
+
+table {
+    font-size: 30px;
+    position: center
+}
+
+tr {
+    border-bottom: solid 3px black;
+}
+
+
+fieldset {
+    border-radius: 15px;
+}
+
+.obrazki {
+    width: 300px;
+    height: 300px;
+    position: center;
+    margin-right: 10px;
+}
+
+@media (min-width: 701px) and (max-width:1000px) /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 1000PX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+{
+    * {
+        margin: 0px;
+    }
+
+
+    body {
+        background-color: grey;
+        color: white;
+    }
+
+    canvas {
+        border: 1px solid black;
+        background-color: white
+    }
+
+
+
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border-radius: 10px;
+    }
+
+
+    li {
+        float: left;
+        font-size: 30px;
+    }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+            li a:hover {
+                background-color: deepskyblue;
+            }
+
+    .active {
+        background-color: deepskyblue;
+        color: white;
+    }
+
+    .pionowe {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        display: block;
+        color: #000;
+        padding: 8px 0 8px 16px;
+        text-decoration: none;
+        background-color: #555;
+        color: white;
+    }
+
+    item_name {
+        color: greenyellow
+    }
+
+    label {
+        margin-left: 30px;
+    }
+
+    img {
+        margin-left: 20px;
+    }
+
+    .item {
+        padding: 20px;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        margin-left: 10px;
+        text-align: center;
+        color: black;
+        border-radius: 15px;
+        border: 2px solid white;
+        width: 250px;
+        height: 250px;
+        font-size: 12px;
+    }
+
+        .item:hover {
+            transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            box-shadow: 0 0 20px #888;
+            background-color: #fff;
+            border: 2px solid black;
+        }
+
+    .opisy {
+        text-align: center;
+        border-bottom: solid 2px silver;
+        font-size: 30px;
+        margin-bottom: 5px;
+        color: white
+    }
+
+    td {
+        font-size: 25px;
+        border: solid 2px white;
+    }
+
+    .tytuł {
+        text-align: center;
+    }
+
+
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+    }
+
+        .flex-container > div {
+            width: 250px;
+            height: 310px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+            border: 2px solid silver;
+            font-size: 20px;
+            position: center;
+        }
+
+    .flex-item {
+        padding: 5px;
+        width: 150px;
+        height: 100px;
+        margin-top: 10px;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 3em;
+    }
+
+
+
+    .Describ {
+        font-size: 20px;
+    }
+
+    .znacznik {
+        color: red;
+    }
+
+    header {
+        text-align: center;
+        font-size: 40px;
+        color: orange
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .trailery {
+        width: 1000px;
+        height: 700px;
+    }
+
+    legend {
+        font-size: 40px;
+    }
+
+    table {
+        font-size: 30px;
+        position: center
+    }
+
+    tr {
+        border-bottom: solid 3px black;
+    }
+
+
+    fieldset {
+        border-radius: 15px;
+    }
+
+    .obrazki {
+        width: 300px;
+        height: 300px;
+        position: center;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 480px) and (max-width:700px) /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 480 - 700PX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+{
+    * {
+        margin: 0px;
+    }
+
+
+    body {
+        background-color: grey;
+        color: white;
+    }
+
+    canvas {
+        border: 1px solid black;
+        background-color: white
+    }
+
+
+
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border-radius: 10px;
+    }
+
+
+    li {
+        float: left;
+        font-size: 30px;
+    }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+            li a:hover {
+                background-color: deepskyblue;
+            }
+
+    .active {
+        background-color: deepskyblue;
+        color: white;
+    }
+
+    .pionowe {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        display: block;
+        color: #000;
+        padding: 8px 0 8px 16px;
+        text-decoration: none;
+        background-color: #555;
+        color: white;
+    }
+
+    item_name {
+        color: greenyellow
+    }
+
+    label {
+        margin-left: 30px;
+    }
+
+    img {
+        margin-left: 20px;
+    }
+
+    .item {
+        padding: 20px;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        margin-left: 10px;
+        text-align: center;
+        color: black;
+        border-radius: 15px;
+        border: 2px solid white;
+        width: 250px;
+        height: 250px;
+        font-size: 12px;
+    }
+
+        .item:hover {
+            transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            box-shadow: 0 0 20px #888;
+            background-color: #fff;
+            border: 2px solid black;
+        }
+
+    .opisy {
+        text-align: center;
+        border-bottom: solid 2px silver;
+        font-size: 30px;
+        margin-bottom: 5px;
+        color: white
+    }
+
+    td {
+        font-size: 25px;
+        border: solid 2px white;
+    }
+
+    .tytuł {
+        text-align: center;
+    }
+
+
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+    }
+
+        .flex-container > div {
+            width: 250px;
+            height: 310px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+            border: 2px solid silver;
+            font-size: 20px;
+            position: center;
+        }
+
+    .flex-item {
+        padding: 5px;
+        width: 150px;
+        height: 100px;
+        margin-top: 10px;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 3em;
+    }
+
+
+
+    .Describ {
+        font-size: 20px;
+    }
+
+    .znacznik {
+        color: red;
+    }
+
+    header {
+        text-align: center;
+        font-size: 40px;
+        color: orange
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .trailery {
+        width: 1000px;
+        height: 700px;
+    }
+
+    legend {
+        font-size: 40px;
+    }
+
+    table {
+        font-size: 30px;
+        position: center
+    }
+
+    tr {
+        border-bottom: solid 3px black;
+    }
+
+
+    fieldset {
+        border-radius: 15px;
+    }
+
+    .obrazki {
+        width: 300px;
+        height: 300px;
+        position: center;
+        margin-right: 10px;
+    }
+}
+
+    @media only screen and (max-width: 470px) /*@@@@@@@@@@@@@@@@@@@@@@@ 470 PX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    {
+        * {
+            margin: 0px;
+        }
+
+
+        body {
+            background-color: grey;
+            color: white;
+        }
+
+        canvas {
+            border: 1px solid black;
+            background-color: white
+        }
+
+
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+
+        li {
+            float: left;
+            font-size: 30px;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+
+                li a:hover {
+                    background-color: deepskyblue;
+                }
+
+        .active {
+            background-color: deepskyblue;
+            color: white;
+        }
+
+        .pionowe {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            display: block;
+            color: #000;
+            padding: 8px 0 8px 16px;
+            text-decoration: none;
+            background-color: #555;
+            color: white;
+        }
+
+        item_name {
+            color: greenyellow
+        }
+
+        label {
+            margin-left: 30px;
+        }
+
+        img {
+            margin-left: 20px;
+        }
+
+        .item {
+            padding: 20px;
+            transition: all .4s;
+            -webkit-transition: all .4s;
+            margin-left: 10px;
+            text-align: center;
+            color: black;
+            border-radius: 15px;
+            border: 2px solid white;
+            width: 250px;
+            height: 250px;
+            font-size: 12px;
+        }
+
+            .item:hover {
+                transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                box-shadow: 0 0 20px #888;
+                background-color: #fff;
+                border: 2px solid black;
+            }
+
+        .opisy {
+            text-align: center;
+            border-bottom: solid 2px silver;
+            font-size: 30px;
+            margin-bottom: 5px;
+            color: white
+        }
+
+        td {
+            font-size: 25px;
+            border: solid 2px white;
+        }
+
+        .tytuł {
+            text-align: center;
+        }
+
+
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+        }
+
+            .flex-container > div {
+                width: 250px;
+                height: 310px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+                border: 2px solid silver;
+                font-size: 20px;
+                position: center;
+            }
+
+        .flex-item {
+            padding: 5px;
+            width: 150px;
+            height: 100px;
+            margin-top: 10px;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+        }
+
+
+
+        .Describ {
+            font-size: 20px;
+        }
+
+        .znacznik {
+            color: red;
+        }
+
+        header {
+            text-align: center;
+            font-size: 40px;
+            color: orange
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 40px;
+        }
+
+        .trailery {
+            width: 1000px;
+            height: 700px;
+        }
+
+        legend {
+            font-size: 40px;
+        }
+
+        table {
+            font-size: 30px;
+            position: center
+        }
+
+        tr {
+            border-bottom: solid 3px black;
+        }
+
+
+        fieldset {
+            border-radius: 15px;
+        }
+
+        .obrazki {
+            width: 300px;
+            height: 300px;
+            position: center;
+            margin-right: 10px;
+        }
+    }

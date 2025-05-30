@@ -1,0 +1,40 @@
+﻿body {
+}
+dl, dt, dd {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    
+}
+
+dl {
+    width: 200px;
+   
+}
+
+dt {
+    background-color: #ccc;
+    color: #000;
+    padding: 7px;
+    font-weight: bold;
+    font-size: larger;
+ 
+}
+
+dl a:link, dl a:visited {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+dl a:hover {
+  
+    
+    background-color: deepskyblue;
+}
+.dużeLitery{font-size:30px;}

@@ -1,0 +1,25 @@
+﻿.trailery {
+    width: 700px;
+    height: 500px;
+}
+
+@media (min-width: 701px) and (max-width:1000px) {
+    .trailery {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 480px) and (max-width:700px) {
+    .trailery {
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .trailery {
+        width: 400px;
+        height: 300px;
+    }
+}
