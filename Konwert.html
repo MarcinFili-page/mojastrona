@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Konwerter</title>
+    <link href="Style CSS/StylGłówny.css" rel="stylesheet" type="text/css" />
+    <link href="Style CSS/StylFooter.css" rel="stylesheet" type="text/css" />
+    <script src="js/funkcje.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function calc() {
+            var d = parseFloat(document.getElementById("d").value)
+            var B = parseFloat(document.getElementById("B").value)
+            var dT = parseFloat(document.getElementById("dT").value)
+            var r = parseFloat(document.getElementById("r").value)
+            document.getElementById('wynik').value = (9.81 * Math.pow(d, 3) * B * dT) / Math.pow(r, 2);
+        }
+    </script>
+
+    <style>
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .form-row label {
+            width: 180px;
+            font-weight: bold;
+        }
+
+        .form-row input[type="text"] {
+            flex: 1;
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        .canvas fieldset {
+            max-width: 500px;
+            margin: auto;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            color: white;
+        }
+
+        .opisy {
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .button-center {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .button-center input,
+        .button-center a {
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 6px;
+            border: none;
+            background-color: #444;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button-center input:hover,
+        .button-center a:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body onload="wszystkie()">
+    <div class="panel-informacyjny">
+        <div id="zegar" class="info-blok"></div>
+        <div id="licznik" class="info-blok"></div>
+        <div id="czas" class="info-blok"></div>
+    </div>
+
+    <header><h1>Kalkulator</h1></header>
+
+    <nav>
+        <h2>WYBIERZ SWÓJ DZIAŁ</h2>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="PC/GryPC.html">Gry na PC</a></li>
+            <li><a href="Xbox/XboxGry.html">Gry na Xboxa</a></li>
+            <li><a href="PS3/GryPS3.html">Gry na PS3</a></li>
+            <li><a href="PS4/GryPs4.html">Gry na PS4</a></li>
+            <li><a href="NINTENDO/GryNintendo.html">Gry na Nintendo</a></li>
+        </ul>
+    </nav>
+
+    <header>Obliczanie Radiacyjnego Współczynnika Przejmowania Ciepła</header>
+
+    <div class="canvas">
+        <fieldset>
+            <div class="opisy">
+                Wzór to: Gr = (g · d³ · B · ΔT) / v²<br />
+                g = 9.81 m/s² (przyspieszenie ziemskie)<br />
+                d = średnica rurociągu (lub długość)<br />
+                B = współczynnik rozszerzalności objętościowej<br />
+                ΔT = różnica temperatur<br />
+                v = kinematyczny współczynnik lepkości
+            </div>
+
+            <div class="form-row">
+                <label for="d">d:</label>
+                <input type="text" id="d">
+            </div>
+
+            <div class="form-row">
+                <label for="B">B:</label>
+                <input type="text" id="B">
+            </div>
+
+            <div class="form-row">
+                <label for="dT">ΔT:</label>
+                <input type="text" id="dT">
+            </div>
+
+            <div class="form-row">
+                <label for="r">v:</label>
+                <input type="text" id="r">
+            </div>
+
+            <div class="form-row">
+                <label for="wynik">Wynik:</label>
+                <input type="text" id="wynik" readonly>
+            </div>
+
+            <div class="button-center">
+                <input type="button" value="Oblicz" onclick="calc();" />
+                <a href="Konwert.html">Przejdź do Konwertera</a>
+            </div>
+        </fieldset>
+    </div>
+
+    <footer>
+        <dl>
+            <dd><a href="kontakt.html">Skontaktuj się z nami</a></dd>
+            <dd><a href="Onas.html">O nas</a></dd>
+            <dd><a href="Regulamin.html">Regulamin</a></dd>
+        </dl>
+    </footer>
+
+</body>
+</html>

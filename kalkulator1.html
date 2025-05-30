@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Kalkulator Liczb zespolonych</title>
+    <link href="Style CSS/StylGłówny.css" rel="stylesheet" type="text/css" />
+    <link href="Style CSS/StylFooter.css" rel="stylesheet" type="text/css" />
+    <script src="js/funkcje.js" type="text/javascript"></script>
+    <style>
+    .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.form-row label {
+    width: 50%;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.form-row input[type="text"],
+.form-row select {
+    width: 50%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: white;
+}
+</style>
+    <script type="text/javascript">
+        function calc() {
+            var n1 = parseFloat(document.getElementById("n1").value)
+            var n2 = parseFloat(document.getElementById("n2").value)
+            var n1u = parseFloat(document.getElementById("n1u").value)
+            var n2u = parseFloat(document.getElementById("n2u").value)
+            var znak = document.getElementById("znak").value
+
+            if (znak === "+") {
+                document.getElementById('wynik').value = n1 + n2;
+                document.getElementById('wynik1').value = n1u + n2u;
+            }
+            if (znak === "-") {
+                document.getElementById('wynik').value = n1 - n2;
+                document.getElementById('wynik1').value = n1u - n2u;
+            }
+            if (znak === "x") {
+                document.getElementById('wynik').value = n1 * n2 - n1u * n2u;
+                document.getElementById('wynik1').value = n1 * n2u + n1u * n2;
+            }
+            if (znak === "/") {
+                var dzielnik = n2 * n2 + n2u * n2u;
+                document.getElementById('wynik').value = (n1 * n2 + n1u * n2u) / dzielnik;
+                document.getElementById('wynik1').value = (n1u * n2 - n1 * n2u) / dzielnik;
+            }
+        }
+    </script>
+</head>
+<body onload="wszystkie()">
+    <div class="panel-informacyjny">
+        <div id="zegar" class="info-blok"></div>
+        <div id="licznik" class="info-blok"></div>
+        <div id="czas" class="info-blok"></div>
+    </div> 
+
+    <!-- Nagłówek i menu -->
+    <header>
+        <h1>Lombard z grami i kodami do gier</h1>
+    </header>
+    <nav>
+        <h2>WYBIERZ SWÓJ SPRZĘT</h2>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="PC/GryPC.html">Gry na PC</a></li>
+            <li><a href="Xbox/XboxGry.html">Gry na Xboxa</a></li>
+            <li><a href="PS3/GryPS3.html">Gry na PS3</a></li>
+            <li><a href="PS4/GryPs4.html">Gry na PS4</a></li>
+            <li><a href="NINTENDO/GryNintendo.html">Gry na Nintendo</a></li>
+            <li class="active"><a href="kalkulator1.html">Kalkulator</a></li>
+        </ul>
+    </nav>
+
+    <!-- Kalkulator -->
+     <div class="form-row" style="justify-content: center; margin-top: 20px;">
+    <a href="Konwert.html" style="
+        padding: 10px 20px;
+        background-color: #444;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;">
+        Przejdź do Konwertera
+    </a>
+
+    <a href="PacMan.html" style="
+        padding: 10px 20px;
+        background-color: #444;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 10px;
+        transition: background-color 0.3s;">
+        PacMan
+    </a>
+</div>
+   <main style="max-width: 600px; margin: auto; padding: 20px; background-color: #222; color: white; border-radius: 10px;">
+    <h1 style="text-align: center;">Kalkulator liczb zespolonych</h1>
+
+    <div class="form-row">
+        <label for="n1">Część rzeczywista pierwszej liczby:</label>
+        <input type="text" id="n1" />
+    </div>
+
+    <div class="form-row">
+        <label for="n1u">Część urojona pierwszej liczby:</label>
+        <input type="text" id="n1u" />
+    </div>
+
+    <div class="form-row">
+        <label for="n2">Część rzeczywista drugiej liczby:</label>
+        <input type="text" id="n2" />
+    </div>
+
+    <div class="form-row">
+        <label for="n2u">Część urojona drugiej liczby:</label>
+        <input type="text" id="n2u" />
+    </div>
+
+    <div class="form-row">
+        <label for="znak">Wybierz działanie:</label>
+        <select id="znak">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">×</option>
+            <option value="/">÷</option>
+        </select>
+    </div>
+
+    <div class="form-row" style="justify-content: center; margin-bottom: 20px;">
+        <input type="button" value="Oblicz" onclick="calc();" />
+    </div>
+
+    <div class="form-row">
+        <label for="wynik">Część rzeczywista wyniku:</label>
+        <input type="text" id="wynik" readonly />
+    </div>
+
+    <div class="form-row">
+        <label for="wynik1">Część urojona wyniku:</label>
+        <input type="text" id="wynik1" readonly />
+    </div>
+</main>
+
+    <!-- Stopka -->
+    <footer>
+        <dl>
+            <dd><a href="kontakt.html">Skontaktuj się z na
+            <dd><a href="Onas.html">O nas</a></dd>
+            <dd><a href="Regulamin.html">Regulamin</a></dd>
+        </dl>
+    </footer>
+</body>
+</html>

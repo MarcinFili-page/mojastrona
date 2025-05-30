@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Formularz</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="Style CSS/Formularz.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body class="canvas" onload="wszystkie()"></body>
+    <div class="panel-informacyjny">
+    <div id="zegar" class="info-blok"></div>
+    <div id="licznik" class="info-blok"></div>
+    <div id="czas" class="info-blok"></div>
+</div>
+
+
+
+    <form action="mailto:pocztaStudenta@xyz.pl" method="post" >
+        <i style="color:white">Proszę wypełnić ten formularz</i><br />
+        <i style="color:white">Obowiązkowe pola oznaczono znakiem</i><em><span style="color:red">*</span></em>
+
+       
+        <fieldset style="text-align:left">
+            <legend><strong>Dane kontaktowe</strong></legend>
+
+            <label for="imie">Imię<em><span style="color:red">*</span></em></label>
+            <input id="imie" placeholder="Podaj imię" autofocus required style="margin-bottom:2px">
+
+
+
+
+            <label for="nazwisko">Nazwisko<em><span style="color:red">*</span></em></label>
+
+            <input id="nazwisko" placeholder="Podaj nazwisko" required style="margin-bottom:2px">
+
+
+
+
+            <label for="telefon">Nr telefonu</label>
+            <input id="telefon" placeholder="(+48)xxx-xxx-xxx" style="margin-bottom:2px" />
+
+
+
+            <label for="email">E-mail<em><span style="color:red">*</span></em></label>
+            <input id="email" type="email" required style="margin-bottom:2px">
+
+
+
+        </fieldset>
+
+       
+
+        <fieldset>
+            <legend ;><strong>Dane osobowe</strong></legend>
+
+            <label for="data urodzenia">Data Urodzenia<em><span style="color:red">*</span></em></label>
+            <input id="Data urodzenia" placeholder="mm/dd/rrrr" autofocus required style="margin-bottom:2px;"><br>
+
+            <label for="Wiek">Wiek<em><span style="color:red">*</span></em></label>
+            <input id=" Wiek" placeholder="" required style="margin-bottom:2px">
+
+            <label for="płeć">Płeć</label>
+            <select name="płeć" style="margin-bottom:5px">
+                <option>Kobieta</option>
+                <option>Mężczyzna</option>
+            </select>
+          
+        </fieldset>
+
+        
+
+        <fieldset>
+            <legend><strong>Twoje zainteresowania</strong></legend>
+        
+
+
+
+
+
+         
+                <input type="checkbox" name="zainteresowania" value="wartość"> komputery <br />
+                <p></p>
+                <input type="checkbox" name="zainteresowania" value="wartość"> konsole <br />
+
+                <p></p>
+
+                <input type="checkbox" name="zainteresowania" value="wartość"> gry <br />
+          
+
+           <p></p>
+
+
+                <input type="checkbox" name="zainteresowania" value="wartość">programowanie <br />
+                <p></p>
+                <input type="checkbox" name="zainteresowania" value="wartość">strony html <br />
+                <p></p>
+                <input type="checkbox" name="zainteresowania" value="wartość"> inne <br />
+
+
+
+        </fieldset>
+
+        
+
+        <fieldset>
+            <legend><strong>Zaznacz Przedział wiekowy</strong></legend>
+
+            <input type="radio" name="wiek" value="do 18" style="color:wheat" checked>0-18 <br />
+            <input type="radio" name="wiek" value="19-40">19-40<br />
+            <input type="radio" name="wiek" value="41-60">41-60 <br />
+            <input type="radio" name="wiek" value="powyzej 61">powyzej 61 <br />
+
+        </fieldset>
+
+       
+
+
+        <fieldset>
+            <legend><strong>W czym możemy pomóc?</strong></legend>
+            <select name="przeglądarka">
+                <option></option>
+                <option>Gdzie możemy kupić gry?</option>
+                <option>Czy podany wiek przy grach jest ostateczny?</option>
+                <option>Jaką grę wybrać?</option>
+                <option>Chciał/a bym się z Państwem skontakować</option>
+                <option>Chciałbym nawiązać współpracę</option>
+
+            </select>
+            <p></p>
+            <label for="Inne">Inne<em>*</em></label>
+            <input type="text" name="Inne" >
+            
+        </fieldset>
+
+        
+
+        <fieldset>
+            <legend><strong>Twój ulubiony gatunek gier</strong></legend>
+            <select name="Samochód">
+                <option>Akcji</option>
+                <option>Przygodowe</option>
+                <option>RPG</option>
+                <option>Horrory</option>
+                <option>Dla dzieci</option>
+                
+            </select>
+        </fieldset>
+
+        <!--@@@@@@@@@@@@@@@@@@ OPINIA @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+        <fieldset>
+            <legend><strong>Załączniki</strong></legend>
+            <label for="Przedstaw swoją opinię " style="width:160px;height:20px;">Opinia o stronie:</label>
+            <p></p>
+            <textarea name=" nazwa" cols="20" rows="3" required></textarea>
+            <!-- POWIĘKSZYC POLE W JAKIS SPOSÓB-->
+            <br />
+           
+            <label for="Przesyłanie" style="width:160px;height:20px;margin-bottom:5px">Załącznik/i:</label>
+
+            <input type="file" name="nazwa" />
+
+        </fieldset>
+
+        <footer>
+            <input type="submit" name="Wyślij formularz" value="Wyślij formularz" />
+            <input type="reset" name=" kasuj formularz" value=" kasuj formularz" />
+        </footer>
+
+    </form>
+
+</body>
+
+</html>
